@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --cream: #FAF7F2;
+  --cream-dark: #F0E8D8;
+  --cream-mid: #F5F0E8;
+  --gold: #C4954A;
+  --gold-light: #E8D5A8;
+  --gold-pale: #F8F0DC;
+  --gold-dark: #9A7030;
+  --sage: #3D5C35;
+  --sage-light: #5A7852;
+  --sage-pale: #EDF2EB;
+  --brown: #3C2F20;
+  --text: #2A2318;
+  --text-muted: #7A6E60;
+  --border: #DDD0B8;
+  --border-light: #EDE5D0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--cream);
+  color: var(--text);
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-script { font-family: 'Great Vibes', cursive; }
+.font-serif  { font-family: 'Lora', serif; }
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--cream-dark); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+input, textarea, select {
+  font-family: 'Jost', sans-serif;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 3px rgba(196, 149, 74, 0.12);
+}
+
+::selection {
+  background: var(--gold-light);
+  color: var(--brown);
+}
