@@ -8,6 +8,7 @@ import GalleryPage from './pages/GalleryPage'
 import ContactPage from './pages/ContactPage'
 import BookPage from './pages/BookPage'
 import TestimonialsPage from './pages/TestimonialsPage'
+import AdminPage from './pages/AdminPage'
 
 export type Page = 'home' | 'services' | 'about' | 'gallery' | 'contact' | 'book' | 'testimonials'
 export type Lang = 'fr' | 'ar'
@@ -19,6 +20,12 @@ export default function App() {
   const navigate = (p: Page) => {
     setPage(p)
     window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  // Page d'administration : accessible uniquement via l'URL directe /admin,
+  // volontairement absente du menu de navigation public.
+  if (window.location.pathname === '/admin') {
+    return <AdminPage />
   }
 
   return (
